@@ -10,3 +10,16 @@
 
 ## License
     使用GPL License
+
+## 使用方式
+
+1. 安装 `NodeJS` 环境
+2. 安装 `gitbook`
+```sh
+npm install -g gitbook --registry=https://registry.npm.taobao.org
+```
+3. 运行
+```
+gitbook serve
+```
+4. 在浏览器打开 `http://localhost:4000`
