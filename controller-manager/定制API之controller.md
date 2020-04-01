@@ -241,11 +241,35 @@ spec:
 1. 执行`kubectl create -f premierleague-match.yaml`，kube-controller-manager的日志输出如下
 ```
 触发Add动作
-将要发送给apiserver的match如下:  {{ } {fqhmatch  default /apis/premierleague.k8s.io/v1/namespaces/default/matchs/fqhmatch 67994800-e7cf-11e7-88d3-080027e58fc6 860 1 2017-12-23 05:52:44 -0500 EST <nil> <nil> map[] map[] [] [] } {A B}}
+将要发送给apiserver的match如下:  
+{
+	{ } {fqhmatch  default /apis/premierleague.k8s.io/v1/namespaces/default/matchs/fqhmatch 67994800-e7cf-11e7-88d3-080027e58fc6 860 1 2017-12-23 05:52:44 -0500 EST <nil> <nil> map[] map[] [] [] } {A B}
+}
 触发Update动作
-%s change to %s &{{ } {fqhmatch  default /apis/premierleague.k8s.io/v1/namespaces/default/matchs/fqhmatch 67994800-e7cf-11e7-88d3-080027e58fc6 860 1 2017-12-23 05:52:44 -0500 EST <nil> <nil> map[] map[] [] [] } {A B}} &{{ } {fqhmatch  default /apis/premierleague.k8s.io/v1/namespaces/default/matchs/fqhmatch 67994800-e7cf-11e7-88d3-080027e58fc6 861 1 2017-12-23 05:52:44 -0500 EST <nil> <nil> map[] map[] [] [] } {A B}}
+%s change to %s 
+&{
+	{ } 
+	{
+		fqhmatch  default /apis/premierleague.k8s.io/v1/namespaces/default/matchs/fqhmatch 67994800-e7cf-11e7-88d3-080027e58fc6 860 1 2017-12-23 05:52:44 -0500 EST <nil> <nil> map[] map[] [] [] 
+	} 
+	{A B}
+} 
+&{
+	{ } 
+	{
+		fqhmatch  default /apis/premierleague.k8s.io/v1/namespaces/default/matchs/fqhmatch 67994800-e7cf-11e7-88d3-080027e58fc6 861 1 2017-12-23 05:52:44 -0500 EST <nil> <nil> map[] map[] [] [] 
+	}
+	{A B}
+}
 I1223 05:52:44.073928   26447 match_controller.go:115] Finished syncing match "default/fqhmatch" (17.882353ms)
-将要发送给apiserver的match如下:  {{ } {fqhmatch  default /apis/premierleague.k8s.io/v1/namespaces/default/matchs/fqhmatch 67994800-e7cf-11e7-88d3-080027e58fc6 861 1 2017-12-23 05:52:44 -0500 EST <nil> <nil> map[] map[] [] [] } {A B}}
+将要发送给apiserver的match如下:  
+{
+	{ } 
+	{
+		fqhmatch  default /apis/premierleague.k8s.io/v1/namespaces/default/matchs/fqhmatch 67994800-e7cf-11e7-88d3-080027e58fc6 861 1 2017-12-23 05:52:44 -0500 EST <nil> <nil> map[] map[] [] [] 
+	} 
+	{A B}
+}
 I1223 05:52:44.076619   26447 match_controller.go:115] Finished syncing match "default/fqhmatch" (2.633394ms)
 ```
 

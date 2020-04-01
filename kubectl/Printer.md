@@ -429,10 +429,10 @@ func (p *TemplatePrinter) safeExecute(w io.Writer, obj interface{}) error {
 
 - 用法
 ```shell
-# kubectl get ns default  -o go-template="my attribute is {{.metadata.name}} {{.metadata.uid}} {{.apiVersion}}"
+# kubectl get ns default  -o go-template="my attribute is {{dot.metadata.name}} {{dot.metadata.uid}} {{dot.apiVersion}}"
 my attribute is default d8816de2-c709-11e7-861d-080027e58fc6 v1
 
-# kubectl get ns default  -o go-template="The obj is {{.}}"
+# kubectl get ns default  -o go-template="The obj is {{dot}}"
 ```
 也可以把格式写入到一个文件中，用go-template-file指定格式文件
 

@@ -427,7 +427,42 @@ spec:
 
 那么其获取到的quotas 内容如下:
 ```
-[{{ } {quota-2  default /api/v1/namespaces/default/resourcequotas/quota-2 5b8980b9-c3cf-11e7-a512-080027e58fc6 406 0 2017-11-07 10:21:41 -0500 EST <nil> <nil> map[] map[] [] [] } {map[persistentvolumeclaims:{{10 0} {<nil>} 10 DecimalSI} pods:{{2 0} {<nil>} 2 DecimalSI}] []} {map[persistentvolumeclaims:{{10 0} {<nil>} 10 DecimalSI} pods:{{2 0} {<nil>} 2 DecimalSI}] map[persistentvolumeclaims:{{0 0} {<nil>} 0 DecimalSI} pods:{{0 0} {<nil>} 0 DecimalSI}]}}]
+[{
+	{ } 
+	{
+		quota-2  default /api/v1/namespaces/default/resourcequotas/quota-2 5b8980b9-c3cf-11e7-a512-080027e58fc6 406 0 2017-11-07 10:21:41 -0500 EST 
+		<nil> <nil> map[] map[] [] [] 
+	} 
+	{
+		map[
+			persistentvolumeclaims:{
+				{10 0} {<nil>} 10 DecimalSI
+			} 
+			pods:{
+				{2 0} {<nil>} 2 DecimalSI
+			}
+		] 
+		[]
+	} 
+	{
+		map[
+			persistentvolumeclaims:{
+				{10 0} {<nil>} 10 DecimalSI
+			} 
+			pods:{
+				{2 0} {<nil>} 2 DecimalSI
+			}
+		] 
+		map[
+			persistentvolumeclaims:{
+				{0 0} {<nil>} 0 DecimalSI
+			} 
+			pods:{
+				{0 0} {<nil>} 0 DecimalSI
+			}
+		]
+	}
+}]
 ```
 如果在一个namespace中创建了多个quota，获取到的quotas也会有多个。
 
