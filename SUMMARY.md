@@ -86,6 +86,7 @@
     * [ResourceQuota概念介绍](controller-manager/ResourceQuota概念介绍.md)
     * [ResourceQuota流程分析](controller-manager/ResourceQuota流程分析.md)
     * [定制API之controller](controller-manager/定制API之controller.md)
+    * [QPS限流](controller-manager/qps限流.md)
   * [kubelet](README.md)
     * [Client端的List-Watch机制-kubelet](kubelet/Client端的List-Watch机制-kubelet.md)
     * [Demo-合并三个来源的Pod](kubelet/Demo-合并三个来源的Pod.md)
